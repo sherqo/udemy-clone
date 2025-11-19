@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -7,8 +8,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-2">
-              <div className="h-9 w-9 rounded-md bg-rose-600" aria-hidden />
-              <span className="font-semibold">Udemy UI</span>
+              <Image src="/logo.png" alt="Udemy logo" width={36} height={36} className="rounded-md" />
             </Link>
             <nav className="hidden gap-4 md:flex text-sm text-gray-700">
               <Link href="/courses" className="hover:text-black">

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { courses } from '../../../data/courses';
 
-const course = courses.find((c) => c.slug === 'typescript-masterclass')!;
+const course = courses.find(c => c.slug === 'typescript-masterclass')!;
 
 export default function TypescriptMasterclass() {
   if (!course) return <div className="p-8">Course not found</div>;
@@ -14,7 +14,9 @@ export default function TypescriptMasterclass() {
             {course.image && <Image src={course.image} alt={course.title} fill className="object-cover" />}
           </div>
           <h1 className="text-2xl font-bold">{course.title}</h1>
-          <p className="text-sm text-gray-600">By {course.author} • ⭐ {course.rating}</p>
+          <p className="text-sm text-gray-600">
+            By {course.author} • ⭐ {course.rating}
+          </p>
           <section className="mt-6">
             <h3 className="font-semibold">What you&apos;ll learn</h3>
             <p className="mt-2 text-gray-700">{course.description}</p>
